@@ -1,0 +1,28 @@
+version: "3.9"
+services:
+  ut99-server:
+    build: ./ut99-server
+    image: motelcoconut/ut99-server:latest
+    volumes:
+      - ut99-data:/ut-data
+    ports:
+      - 8000:8000
+      - 5580:5580
+      - 7777:7777/udp
+      - 7778:7778/udp
+      - 8777:8777/udp
+    environment:
+      - UT_SERVERNAME='Super Club Coconut Ass Destruction Server'
+      - UT_ADMINNAME='MOTEL COCONUT'
+      - UT_ADMINEMAIL='motel@coconut.com'
+      - UT_MOTD1='The best message of the day ever'
+      - UT_ADMINPWD='superpasswordofdoom'
+      - UT_WEBADMINUSER='webadmin'
+      - UT_WEBADMINPWD='superwebpasswordofdoom'
+      - UT_SERVERURL="CTF-Face?game=BotPack.CTFGame?mutator=BotPack.SniperArena,MapVoteLAv2.BDBMapVote,FlagAnnouncementsV2.FlagAnnouncements,ZeroPingPlus103.ZP_SniperArena,KickIdlePlayers2.KickIdlePlayers2"
+      - UT_MINPLAYERS_CTF=16
+      - UT_MINPLAYERS_DM=16
+      - UT_INITIALBOTS_CTF=16
+      - UT_INITIALBOTS_DM=16
+volumes:
+  ut99-data:
