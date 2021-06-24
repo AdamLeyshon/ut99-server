@@ -70,10 +70,6 @@ This mod is added as a mutator. So it must be added to the mutators list to work
 When this mod is enabled, self damage (for example from rocket launchers) can be disabled.
 Further configuration can be done in the `System/NoSelfDamage.ini` file.
 
-## WhoPushedMe
-This mod is added as a mutator. So it must be added to the mutators list to work.
-When this mode is enabled, detects if someone is killed because someone else pushed/hit them and they fell to their death and grants the killer the corresponding points (or negative points when a teammate is killed).
-
 ## ZeroPingPlus103
 This mod is added as a mutator. So it must be added to the mutators list to work.
 When this mod is enabled, the clientside calculates if a hit was a hit or not and tells this the server, effectively leading to 0 ping.
