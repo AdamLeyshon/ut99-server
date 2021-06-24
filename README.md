@@ -1,5 +1,5 @@
 # ut99-server
-This is just a fork of another project. See `Frok` for details.
+This is just a fork of another project. See `Fork` for details.
 
 A dockerfile for a fully functional and easy configurable Unreal Tournament 99 server.
 This image is based on the original linux server 436 with all four bonus packs and the UTPGPatch451 patch for linux.
