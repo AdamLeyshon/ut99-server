@@ -12,7 +12,7 @@ services:
       - 7778:7778/udp
       - 8777:8777/udp
     environment:
-      - UT_SERVERNAME='Super Club Coconut Ass Destruction Server'
+      - UT_SERVERNAME='Super Server 9000'
       - UT_ADMINNAME='MOTEL COCONUT'
       - UT_ADMINEMAIL='motel@coconut.com'
       - UT_MOTD1='The best message of the day ever'
