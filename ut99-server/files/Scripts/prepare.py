@@ -116,7 +116,16 @@ def prepare():
     set_config_to_environment('UT_MINPLAYERS_DM', utIniFileServer, 'Botpack.DeathMatchPlus', 'MinPlayers')
     set_config_to_environment('UT_INITIALBOTS_CTF', utIniFileServer, 'Botpack.CTFGame', 'InitialBots')
     set_config_to_environment('UT_INITIALBOTS_DM', utIniFileServer, 'Botpack.DeathMatchPlus', 'InitialBots')
-
+    
+    ## Set Port Numbers to listen on
+    SERVER_PORT = int(os.environ.get('SERVER_PORT', 7777))
+    WEB_PORT = int(os.environ.get('UT_ADMINPORT'))
+    if not WEB_PORT:
+        WEB_PORT = SERVER_PORT - 1
+    set_config_value(utIniFileServer, 'URL', 'Port', SERVER_PORT)    
+    set_config_value(utIniFileServer, 'UWeb.WebServer', 'ListenPort', WEB_PORT)
+    
+    
 def move_and_symlink(fileSrc, fileDest):
     os.rename(fileSrc, fileDest)
     symlink(fileDest, fileSrc)
